@@ -23,7 +23,7 @@ public class MainView {
         
         PrintWriter pw = resp.getWriter();
         pw.write("<html>");
-        pw.println("<h1>PSP01 Program!</h1>");
+        pw.println("<h1>PSP 1.0 Program!</h1>");
         
         pw.write("<form action=\"calc\" method=\"post\"> \n" +
                 "    Numbers to Calc: <input type=\"text\" name=\"calc\">\n" +
