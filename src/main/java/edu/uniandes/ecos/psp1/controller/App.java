@@ -107,7 +107,7 @@ public class App extends HttpServlet{
         calcDatos.CalcularR2();
         calcDatos.CalcularYk();
         
-        MainView.showResults(req, resp,  numbersListX.toString(), numbersListY.toString(),calcDatos.B0,calcDatos.B1,calcDatos.Rxy,calcDatos.R2,calcDatos.Yk,calcDatos.MultiDatos,cant);
+        MainView.showResults(req, resp,  numbersListX.toString(), numbersListY.toString(),calcDatos.B0,calcDatos.B1,calcDatos.Rxy,calcDatos.R2,calcDatos.Yk,calcDatos.Dato1Exp2,calcDatos.Dato1Exp2);
        }catch(Exception ex){
          MainView.error(req, resp);
        }

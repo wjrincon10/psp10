@@ -20,9 +20,9 @@ public class CalcularDatos {
     public double Yk;
     private double MediaDato1;
     private double MediaDato2;
-    public double MultiDatos;
-    private double Dato1Exp2;
-    private double Dato2Exp2;
+    private double MultiDatos;
+    public double Dato1Exp2;
+    public double Dato2Exp2;
     private double CantDatos;
     
     private LinkedList<Double> inputDataX;
