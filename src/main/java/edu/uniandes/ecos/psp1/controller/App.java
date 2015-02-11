@@ -100,7 +100,8 @@ public class App extends HttpServlet{
         calcDatos.setInputData(numbersListX, numbersListY);
         calcDatos.InicializarData();
         
-        MainView.showResults(req, resp,  numbersListX.toString(), numbersListY.toString());
+        
+        MainView.showResults(req, resp,  numbersListX.toString(), numbersListY.toString(),calcDatos.MediaDato1);
        }catch(Exception ex){
          MainView.error(req, resp);
        }

@@ -18,8 +18,8 @@ public class CalcularDatos {
     private double Rxy;
     private double R2;
     private double Yk;
-    private double MediaDato1;
-    private double MediaDato2;
+    public double MediaDato1;
+    public double MediaDato2;
     private double MultiDatos;
     private double Dato1Exp2;
     private double Dato2Exp2;
