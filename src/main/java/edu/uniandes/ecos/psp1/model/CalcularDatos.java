@@ -13,14 +13,14 @@ import java.util.LinkedList;
  */
 public class CalcularDatos {
     static final int Xk = 386;
-    private double B0;
-    private double B1;
-    private double Rxy;
-    private double R2;
-    private double Yk;
+    public double B0;
+    public double B1;
+    public double Rxy;
+    public double R2;
+    public double Yk;
     private double MediaDato1;
     private double MediaDato2;
-    public double MultiDatos;
+    private double MultiDatos;
     private double Dato1Exp2;
     private double Dato2Exp2;
     private double CantDatos;

@@ -101,8 +101,13 @@ public class App extends HttpServlet{
         calcDatos.setInputData(numbersListX, numbersListY);
         calcDatos.InicializarData(cant);
         
+        calcDatos.CalcularB0();
+        calcDatos.CalcularB1();
+        calcDatos.CalcularRxy();
+        calcDatos.CalcularR2();
+        calcDatos.CalcularYk();
         
-        MainView.showResults(req, resp,  numbersListX.toString(), numbersListY.toString(),calcDatos.MultiDatos);
+        MainView.showResults(req, resp,  numbersListX.toString(), numbersListY.toString(),calcDatos.B0,calcDatos.B1,calcDatos.Rxy,calcDatos.R2,calcDatos.Yk);
        }catch(Exception ex){
          MainView.error(req, resp);
        }
