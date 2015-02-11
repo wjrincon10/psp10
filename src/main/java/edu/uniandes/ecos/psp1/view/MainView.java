@@ -26,18 +26,19 @@ public class MainView {
         pw.println("<h1>PSP 1.0 Program!</h1>");
         
         pw.write("<form action=\"calc\" method=\"post\"> \n" +
-                "    Numbers to Calc: <input type=\"text\" name=\"calc\">\n" +
+                "    Ingrese los numeros X: <input type=\"text\" name=\"calcx\">\n" +
+                "    Ingrese los numeros Y: <input type=\"text\" name=\"calcy\">\n" +
                 "    <input type=\"submit\" value=\"Calc\">\n" +
                 "</form> ");
         pw.write("</html>");
 
     }
     
-    public static void showResults(HttpServletRequest req, HttpServletResponse resp, Double stdDev, String values, Double mean)
+    public static void showResults(HttpServletRequest req, HttpServletResponse resp,  String values)
             throws ServletException, IOException {
         resp.getWriter().println("<b>List:</b> "+values +"<br>");
-        resp.getWriter().println("<b>Mean:</b> "+mean + "<br>");
-        resp.getWriter().println("<b>STD: </b> "+stdDev + "<br>");
+        //resp.getWriter().println("<b>Mean:</b> "+mean + "<br>");
+        //resp.getWriter().println("<b>STD: </b> "+stdDev + "<br>");
     }
     
     public static void error(HttpServletRequest req, HttpServletResponse resp)

@@ -16,6 +16,8 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 import edu.uniandes.ecos.psp1.view.MainView;
+import edu.uniandes.ecos.psp1.model.CalcularDatos;
+import java.util.LinkedList;
 
 /**
  *
@@ -50,9 +52,53 @@ public class App extends HttpServlet{
                 
         try {
             MainView.showHome(req,resp);
-            //consoleInput(req, resp);
+            consoleInput(req, resp);
         } catch (Exception ex) {
             Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+     public void consoleInput(HttpServletRequest req, HttpServletResponse resp) throws Exception {
+        //System.out.println("Por favor, ingrese la cantidad de numeros que desea ingresar:");
+        //Scanner input = new Scanner(System.in);
+        String calcx = req.getParameter("calcx");
+        String calcy = req.getParameter("calcy");
+
+        String[] strElementsX = calcx.split(" ");
+        String[] strElementsY = calcy.split(" ");
+        
+        Double nextElementX = 0D;
+        Double nextElementY = 0D;
+        
+        LinkedList<Double> numbersListX = new LinkedList<Double>();
+        LinkedList<Double> numbersListY = new LinkedList<Double>();
+        
+        CalcularDatos calcDatos = new CalcularDatos();
+        //StatisticCalculator calculator = new StatisticCalculator();
+
+        for (String strElement : strElementsX) {
+            try {
+                nextElementX = Double.valueOf(strElement);
+                numbersListX.add(nextElementX);
+                
+            }catch(NumberFormatException ex){
+                MainView.error(req, resp);
+            }
+        }
+        
+        for (String strElement : strElementsY) {
+            try {
+                nextElementY = Double.valueOf(strElement);
+                numbersListY.add(nextElementY);
+                
+            }catch(NumberFormatException ex){
+                MainView.error(req, resp);
+            }
+        }
+           
+        calcDatos.setInputData(numbersListX, numbersListY);
+        
+        MainView.showResults(req, resp,  numbersListX.toString());
+    }
+
 }
