@@ -59,6 +59,7 @@ public class App extends HttpServlet{
     }
     
      public void consoleInput(HttpServletRequest req, HttpServletResponse resp) throws Exception {
+         try{
         //System.out.println("Por favor, ingrese la cantidad de numeros que desea ingresar:");
         //Scanner input = new Scanner(System.in);
         String calcx = req.getParameter("calcx");
@@ -97,8 +98,12 @@ public class App extends HttpServlet{
         }
            
         calcDatos.setInputData(numbersListX, numbersListY);
+        calcDatos.InicializarData();
         
         MainView.showResults(req, resp,  numbersListX.toString(), numbersListY.toString());
+       }catch(Exception ex){
+         MainView.error(req, resp);
+       }
     }
 
 }
