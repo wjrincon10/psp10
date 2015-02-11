@@ -34,10 +34,12 @@ public class MainView {
 
     }
     
-    public static void showResults(HttpServletRequest req, HttpServletResponse resp,  String valuesX, String valuesY, Double B0, Double B1, Double Rxy, Double R2, Double Yk)
+    public static void showResults(HttpServletRequest req, HttpServletResponse resp,  String valuesX, String valuesY, Double B0, Double B1, Double Rxy, Double R2, Double Yk, Double M1, Double M2)
             throws ServletException, IOException {
         resp.getWriter().println("<b>List X:</b> "+valuesX +"<br>");
-        resp.getWriter().println("<b>List Y:</b> "+valuesY +"<br>");        
+        resp.getWriter().println("<b>List Y:</b> "+valuesY +"<br>");   
+        resp.getWriter().println("<b>Media 1:</b> "+ M1 + "<br>");
+        resp.getWriter().println("<b>Media 2:</b> "+ M2 + "<br>");
         resp.getWriter().println("<b>B0:</b> "+ B0 + "<br>");
         resp.getWriter().println("<b>B1:</b> "+ B1 + "<br>");
         resp.getWriter().println("<b>Rxy:</b> "+ Rxy + "<br>");
