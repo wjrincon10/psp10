@@ -101,8 +101,8 @@ public class App extends HttpServlet{
         calcDatos.setInputData(numbersListX, numbersListY);
         calcDatos.InicializarData(cant);
         
-        calcDatos.CalcularB0();
         calcDatos.CalcularB1();
+        calcDatos.CalcularB0();        
         calcDatos.CalcularRxy();
         calcDatos.CalcularR2();
         calcDatos.CalcularYk();
