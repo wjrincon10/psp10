@@ -40,6 +40,7 @@ public class CalcularDatos {
     }
     
     public void InicializarData(int cant){
+        this.CantDatos= cant;
         MediaDato1 = Calcular.CalcularMedia(this.inputDataX);
         MediaDato2 = Calcular.CalcularMedia(this.inputDataY);
         MultiDatos = Calcular.CalcularMultDatos(this.inputDataX, this.inputDataY, cant);
