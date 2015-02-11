@@ -60,6 +60,7 @@ public class App extends HttpServlet{
     
      public void consoleInput(HttpServletRequest req, HttpServletResponse resp) throws Exception {
          try{
+             int cant=0;
         //System.out.println("Por favor, ingrese la cantidad de numeros que desea ingresar:");
         //Scanner input = new Scanner(System.in);
         String calcx = req.getParameter("calcx");
@@ -81,7 +82,7 @@ public class App extends HttpServlet{
             try {
                 nextElementX = Double.valueOf(strElement);
                 numbersListX.add(nextElementX);
-                
+                cant++;
             }catch(NumberFormatException ex){
                 MainView.error(req, resp);
             }
@@ -98,10 +99,10 @@ public class App extends HttpServlet{
         }
            
         calcDatos.setInputData(numbersListX, numbersListY);
-        calcDatos.InicializarData();
+        calcDatos.InicializarData(cant);
         
         
-        MainView.showResults(req, resp,  numbersListX.toString(), numbersListY.toString(),calcDatos.MediaDato1);
+        MainView.showResults(req, resp,  numbersListX.toString(), numbersListY.toString(),calcDatos.MultiDatos);
        }catch(Exception ex){
          MainView.error(req, resp);
        }

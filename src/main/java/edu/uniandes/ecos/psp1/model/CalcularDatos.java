@@ -18,9 +18,9 @@ public class CalcularDatos {
     private double Rxy;
     private double R2;
     private double Yk;
-    public double MediaDato1;
-    public double MediaDato2;
-    private double MultiDatos;
+    private double MediaDato1;
+    private double MediaDato2;
+    public double MultiDatos;
     private double Dato1Exp2;
     private double Dato2Exp2;
     private double CantDatos;
@@ -39,10 +39,10 @@ public class CalcularDatos {
         this.inputDataY = inputY;
     }
     
-    public void InicializarData(){
+    public void InicializarData(int cant){
         MediaDato1 = Calcular.CalcularMedia(this.inputDataX);
         MediaDato2 = Calcular.CalcularMedia(this.inputDataY);
-        MultiDatos = Calcular.CalcularMultDatos(this.inputDataX, this.inputDataY, 0);
+        MultiDatos = Calcular.CalcularMultDatos(this.inputDataX, this.inputDataY, cant);
         Dato1Exp2 = Calcular.CalcularDatoExp2(this.inputDataX);
         Dato2Exp2 = Calcular.CalcularDatoExp2(this.inputDataY);
     }
