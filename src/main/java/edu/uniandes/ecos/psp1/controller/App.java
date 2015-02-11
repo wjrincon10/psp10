@@ -98,7 +98,7 @@ public class App extends HttpServlet{
            
         calcDatos.setInputData(numbersListX, numbersListY);
         
-        MainView.showResults(req, resp,  numbersListX.toString());
+        MainView.showResults(req, resp,  numbersListX.toString(), numbersListY.toString());
     }
 
 }

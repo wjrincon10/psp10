@@ -34,9 +34,11 @@ public class MainView {
 
     }
     
-    public static void showResults(HttpServletRequest req, HttpServletResponse resp,  String values)
+    public static void showResults(HttpServletRequest req, HttpServletResponse resp,  String valuesX, String valuesY)
             throws ServletException, IOException {
-        resp.getWriter().println("<b>List:</b> "+values +"<br>");
+        resp.getWriter().println("<b>List X:</b> "+valuesX +"<br>");
+        resp.getWriter().println("<b>List Y:</b> "+valuesY +"<br>");
+        
         //resp.getWriter().println("<b>Mean:</b> "+mean + "<br>");
         //resp.getWriter().println("<b>STD: </b> "+stdDev + "<br>");
     }
