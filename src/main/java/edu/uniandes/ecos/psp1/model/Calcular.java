@@ -66,6 +66,6 @@ public class Calcular {
             acum = acum + lista1;
         }
           
-        return Math.pow(acum, 2) ;
+        return acum ;
      }
 }
