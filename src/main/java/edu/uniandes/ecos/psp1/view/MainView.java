@@ -38,8 +38,6 @@ public class MainView {
             throws ServletException, IOException {
         resp.getWriter().println("<b>List X:</b> "+valuesX +"<br>");
         resp.getWriter().println("<b>List Y:</b> "+valuesY +"<br>");   
-        resp.getWriter().println("<b>Media 1:</b> "+ M1 + "<br>");
-        resp.getWriter().println("<b>Media 2:</b> "+ M2 + "<br>");
         resp.getWriter().println("<b>B0:</b> "+ B0 + "<br>");
         resp.getWriter().println("<b>B1:</b> "+ B1 + "<br>");
         resp.getWriter().println("<b>Rxy:</b> "+ Rxy + "<br>");

@@ -72,9 +72,9 @@ public class CalcularDatos {
         double decDeno1=0;
         double decDeno2 = 0;
         
-        decRxy = (this.CantDatos*this.MultiDatos) - (this.SumDato1 * this.SumDato2);
-        decDeno1 = (this.CantDatos*this.Dato1Exp2) - Math.pow(this.SumDato1, 2);
-        decDeno2 = (this.CantDatos* this.Dato2Exp2) - Math.pow(this.SumDato2, 2);
+        decRxy = (this.CantDatos * this.MultiDatos) - (this.SumDato1 * this.SumDato2);
+        decDeno1 = (this.CantDatos * this.Dato1Exp2) - Math.pow(this.SumDato1, 2);
+        decDeno2 = (this.CantDatos * this.Dato2Exp2) - Math.pow(this.SumDato2, 2);
         
         decRxy = decRxy / Math.sqrt(decDeno1 * decDeno2);
         
