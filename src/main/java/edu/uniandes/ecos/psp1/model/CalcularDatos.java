@@ -24,6 +24,8 @@ public class CalcularDatos {
     public double Dato1Exp2;
     public double Dato2Exp2;
     private double CantDatos;
+    private double SumDato1;
+    private double SumDato2;
     
     private LinkedList<Double> inputDataX;
     private LinkedList<Double> inputDataY;
@@ -46,6 +48,8 @@ public class CalcularDatos {
         MultiDatos = Calcular.CalcularMultDatos(this.inputDataX, this.inputDataY, cant);
         Dato1Exp2 = Calcular.CalcularDatoExp2(this.inputDataX);
         Dato2Exp2 = Calcular.CalcularDatoExp2(this.inputDataY);
+        SumDato1 = Calcular.CalcularSumDato(this.inputDataX);
+        SumDato2 = Calcular.CalcularSumDato(this.inputDataY);
     }
     
     public void CalcularB0(){
@@ -68,9 +72,9 @@ public class CalcularDatos {
         double decDeno1=0;
         double decDeno2 = 0;
         
-        decRxy = (this.CantDatos * this.MultiDatos) - (this.Dato1Exp2 * this.Dato2Exp2);
-        decDeno1 = (this.CantDatos * this.Dato1Exp2) - Math.pow(this.Dato1Exp2, 2);
-        decDeno2 = (this.CantDatos * this.Dato2Exp2) - Math.pow(this.Dato2Exp2, 2);
+        decRxy = this.MultiDatos - (this.SumDato1 * this.SumDato2);
+        decDeno1 = (this.Dato1Exp2) - this.SumDato1;
+        decDeno2 = ( this.Dato2Exp2) - this.SumDato2;
         
         decRxy = decRxy / Math.sqrt(decDeno1 * decDeno2);
         

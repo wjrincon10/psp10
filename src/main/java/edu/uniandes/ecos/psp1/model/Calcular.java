@@ -58,4 +58,14 @@ public class Calcular {
           
         return acum ;
      }
+    
+    public static double CalcularSumDato(LinkedList<Double> lista){
+        double acum =0;
+                
+        for (Double lista1 : lista) {
+            acum = acum + lista1;
+        }
+          
+        return Math.pow(acum, 2) ;
+     }
 }
